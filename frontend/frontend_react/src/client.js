@@ -1,8 +1,12 @@
 import sanityClient from '@sanity/client';
 import imageUrlBuilder from '@sanity/image-url';
+import crypto from 'crypto-js';
 
-const Id = process.env.REACT_APP_SANITY_PROJECT_ID;
+const Id = crypto.AES.encrypt();
 
+console.log(Id);
+
+console;
 export const client = sanityClient({
   projectId: Id,
   dataset: 'production',
